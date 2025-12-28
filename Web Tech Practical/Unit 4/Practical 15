@@ -2,38 +2,17 @@
 <html>
 <body>
 
-<h2>Simple Form</h2>
+<h2 id="title">Hello</h2>
+<p class="msg">This is a paragraph</p>
 
-<form onsubmit="return checkForm()">
-
-  Name: 
-  <input type="text" id="name" oninput="liveCheck()">
-  <br><br>
-
-  <input type="submit" value="Submit">
-
-</form>
+<button onclick="changeText()">Click Me</button>
 
 <script>
-function liveCheck() {
-    let n = document.getElementById("name").value;
+function changeText() {
+ 
+    document.getElementById("title").innerHTML = "Changed using getElementById";
 
-    if (n.length < 3) {
-        alert("Name must be at least 3 characters");
-    }
-}
-
-
-function checkForm() {
-    let n = document.getElementById("name").value;
-
-    if (n === "") {
-        alert("Name cannot be empty");
-        return false;
-    }
-
-    alert("Form submitted!");
-    return true;
+    document.querySelector(".msg").innerHTML = "Changed using querySelector";
 }
 </script>
 
