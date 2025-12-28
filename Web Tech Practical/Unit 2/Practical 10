@@ -1,103 +1,102 @@
+// Use div and span elements for layout and apply styling with CSS.
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Simple Responsive Page</title>
+    <meta charset="UTF-8">
+    <title>Div and Span Example</title>
 
     <style>
-                body {
+        /* Page styling */
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
         }
 
-        header, footer {
-            background-color: #3498db;
+        /* Div used for layout */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 30%;
+            background-color: #f2f2f2;
+            padding: 15px;
+        }
+
+        .content {
+            width: 70%;
+            background-color: #ffffff;
+            padding: 15px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* Span used for inline styling */
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: yellow;
+        }
+
+        .footer {
+            background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;         }
-
-        nav ul li a {
-            display: block;
-            padding: 0.8rem;
-            text-decoration: none;
-            color: white;
-            border-bottom: 1px solid #fff;
-        }
-
-        nav ul li a:hover {
-            background-color: #2980b9;
-        }
-
-        main {
-            padding: 1rem;
-        }
-
-        section {
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background-color: #ecf0f1;
-            border-radius: 0.5rem;
-        }
-
-                @media screen and (min-width: 600px) {
-            nav ul {
-                flex-direction: row; 
-                justify-content: center;
-            }
-
-            nav ul li a {
-                border: none;
-                margin: 0 0.5rem;
-            }
-
-            main {
-                display: flex;
-                gap: 1rem;
-            }
-
-            section {
-                flex: 1; 
-            }
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>My Simple Responsive Page</h1>
-    </header>
+    <!-- Div: Header -->
+    <div class="header">
+        <h1>Div and Span Layout</h1>
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Div: Main layout -->
+    <div class="container">
 
-    <main>
-        <section>
-            <h2>Section 1</h2>
-            <p>This is a simple responsive section.</p>
-        </section>
-        <section>
-            <h2>Section 2</h2>
-            <p>Resize the browser to see how layout changes.</p>
-        </section>
-    </main>
+        <!-- Div: Sidebar -->
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Navigation links here</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 My Website</p>
-    </footer>
+        <!-- Div: Content -->
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>
+                This paragraph contains a 
+                <span class="highlight">highlighted word</span>
+                using span.
+            </p>
+
+            <p>
+                Span is used for 
+                <span class="note">inline styling</span>
+                without breaking the layout.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Div: Footer -->
+    <div class="footer">
+        <p>© 2025 Web Design</p>
+    </div>
 
 </body>
 </html>
