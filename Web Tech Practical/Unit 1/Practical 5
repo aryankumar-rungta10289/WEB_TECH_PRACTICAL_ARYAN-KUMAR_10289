@@ -1,49 +1,83 @@
-<!DOCTYPE html>
-<html>
+//Use semantic elements (<article>,<section>,<nav>,<aside>,<footer>),to build a structured web page.
+
+    <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Sample HTML Form</title>
+    <meta charset="UTF-8">
+    <title>Semantic HTML Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, nav, section, article, aside, footer {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav a {
+            margin-right: 15px;
+        }
+        section {
+            width: 65%;
+            float: left;
+        }
+        aside {
+            width: 25%;
+            float: right;
+        }
+        footer {
+            clear: both;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-    <h1 align="center">Student Registration Form</h1>
+    <!-- Header -->
+    <header>
+        <h1>My Website</h1>
+        <p>Welcome to my semantic HTML page</p>
+    </header>
 
-    <form action="#" method="post" align="center">
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
 
-        <!-- Name Input -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+    <!-- Main Content Section -->
+    <section>
+        <h2>Main Section</h2>
 
-        <!-- Gender Radio Buttons -->
-        Gender:<br>
-        <input type="radio" id="male" name="gender" value="Male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">male</label><br>
-        <input type="radio" id="other" name="gender" value="Other">
-        <label for="other">Other</label><br><br>
+        <article>
+            <h3>Article 1</h3>
+            <p>
+                This is an article. It represents independent and meaningful content.
+            </p>
+        </article>
 
-        <!-- Hobbies Checkboxes -->
-        Hobbies:<br>
-        <input type="checkbox" id="reading" name="hobbies" value="Reading">
-        <label for="reading">Reading</label><br>
-        <input type="checkbox" id="music" name="hobbies" value="Music">
-        <label for="music">Music</label><br>
-        <input type="checkbox" id="sports" name="hobbies" value="Sports">
-        <label for="sports">Sports</label><br><br>
+        <article>
+            <h3>Article 2</h3>
+            <p>
+                Another article related to the main section content.
+            </p>
+        </article>
+    </section>
 
-        <!-- Select Menu -->
-        <label for="course">Select Course:</label>
-        <select id="course" name="course">
-            <option value="cse">Computer Science</option>
-            <option value="ece">Electronics</option>
-            <option value="mech">Mechanical</option>
-            <option value="civil">Civil</option>
-        </select><br><br>
+    <!-- Sidebar -->
+    <aside>
+        <h3>Aside Content</h3>
+        <p>
+            This is additional information like ads, links, or related content.
+        </p>
+    </aside>
 
-        <!-- Submit Button -->
-        <input type="submit" value="Submit">
-
-    </form>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 My Website | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
