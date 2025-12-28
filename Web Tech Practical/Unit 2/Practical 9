@@ -1,65 +1,109 @@
+// Create a responsive web page using media queries and mobile-first design with flexible units.
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CSS Selectors Example</title>
+    <meta charset="UTF-8">
+    <title>Responsive Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-         h1 {
-            color: darkblue;
-        }
-
-        .highlight {
-            background-color: yellow;
-        }
-
-
-        #unique {
-            color: red;
-            font-weight: bold;
-        }
-
-
-        p, li {
+        /* ===== Mobile First (default styles) ===== */
+        body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            font-size: 16px;
         }
 
-
-        div p {
-            color: green;
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
         }
 
-
-        a[target="_blank"] {
-            color: orange;
+        nav {
+            background: #555;
+            padding: 0.5rem;
+            text-align: center;
         }
 
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
 
-        a:hover {
-            text-decoration: underline;
+        .container {
+            padding: 1rem;
+        }
+
+        .box {
+            background: #f2f2f2;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* ===== Tablet View (min-width: 600px) ===== */
+        @media (min-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 0 1rem;
+            }
+
+            .container {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .box {
+                width: 50%;
+            }
+        }
+
+        /* ===== Desktop View (min-width: 900px) ===== */
+        @media (min-width: 900px) {
+            body {
+                font-size: 1.1rem;
+            }
+
+            .box {
+                width: 33.33%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>CSS Selector Examples</h1>
+<header>
+    <h1>Responsive Web Page</h1>
+    <p>Mobile-First Design</p>
+</header>
 
-    <p class="highlight">This paragraph uses a <b>class selector</b> with yellow background.</p>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
 
-    <p id="unique">This paragraph uses an <b>ID selector</b> to style text red and bold.</p>
+<div class="container">
+    <div class="box">Content Box 1</div>
+    <div class="box">Content Box 2</div>
+    <div class="box">Content Box 3</div>
+</div>
 
-    <div>
-        <p>This paragraph is inside a div and uses a <b>descendant selector</b> to turn green.</p>
-    </div>
-
-    <ul>
-        <li>List item 1</li>
-        <li>List item 2</li>
-    </ul>
-
-    <p>
-        Visit <a href="https://www.google.com" target="_blank">Google</a> - this uses an <b>attribute selector</b>.
-    </p>
+<footer>
+    <p>© 2025 Responsive Design</p>
+</footer>
 
 </body>
 </html>
