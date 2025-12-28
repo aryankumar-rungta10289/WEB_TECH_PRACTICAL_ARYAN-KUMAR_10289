@@ -1,60 +1,75 @@
+//Style a web page using advanced CSS: Box model, background imaged, borders, margins, and padding.
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Advanced CSS Example</title>
+    <meta charset="UTF-8">
+    <title>Advanced CSS Styling</title>
 
     <style>
-
+        /* Body styling with background image */
         body {
-            background-image: url('https://via.placeholder.com/1200x800');
-            background-size: cover;
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://via.placeholder.com/1200x600");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
-                .container {
-            width: 80%;
-            margin: 50px auto;             
-            padding: 20px;
-            border: 5px solid #333; 
-            background-color: rgba(255, 255, 255, 0.8); 
-            box-sizing: border-box;        }
+        /* Container demonstrating box model */
+        .container {
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.9);
 
+            /* Box Model */
+            padding: 20px;          /* Inner space */
+            border: 4px solid navy; /* Border */
+            margin: 50px auto;      /* Outer space */
 
+            box-sizing: border-box;
+        }
+
+        /* Heading styling */
         h1 {
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 20px; 
+            color: darkblue;
+            border-bottom: 2px solid gray;
+            padding-bottom: 10px;
         }
 
+        /* Paragraph styling */
         p {
-            color: #34495e;
-            line-height: 1.6;
-            margin-bottom: 15px;
+            text-align: justify;
+            border: 2px dashed gray;
+            padding: 10px;
+            margin-top: 15px;
         }
 
+        /* Button styling */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 2px solid black;
+            background-color: lightblue;
+            cursor: pointer;
+        }
 
-        .box {
-            border: 3px dashed #e74c3c;
-            padding: 15px;
-            margin: 10px 0;
-            background-color: #f1c40f;
+        button:hover {
+            background-color: skyblue;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Advanced CSS Box Model Example</h1>
+        <h1>Advanced CSS</h1>
 
-        <p>This container demonstrates the CSS box model, including margins, padding, borders, and background color.</p>
+        <p>
+            This webpage demonstrates advanced CSS concepts such as the box model,
+            background images, borders, margins, and padding.
+        </p>
 
-        <div class="box">
-            <p>This is a box inside the container. It has its own padding, margin, border, and background color.</p>
-        </div>
-
-        <p>Notice how the container has padding inside, margin outside, and a border around it. The background image is applied to the whole page.</p>
+        <button>Click Me</button>
     </div>
 
 </body>
